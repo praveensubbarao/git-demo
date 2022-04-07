@@ -119,4 +119,72 @@ Backout Working Directory Changes
 git checkout -- file-name
 Following the above command will back out any changes made to the specified file and replace it with the version last committed in Git
 
+Git History / File Management Commands
+ 
+
+Lecture Command Listing -- History
+git log
+git help log
+git log --oneline --graph --decorate --color
+ 
+
+Lecture Command Listing -- Removing Files
+pwd
+git status
+mate debug.log
+ls
+git status
+git add .
+git status
+git commit -m "adding log file that really does not belong here"
+clear
+git status
+git rm debug.log
+ls
+git status
+git commit -m "removing log file"
+clear
+mate info.log
+ls
+git add info.log
+git commit -m "adding info log"
+git status
+clear
+ls
+rm info.log
+ls
+git status
+git add .
+git add -u
+clear
+git status
+git commit -m "Removing info.log"
+ 
+
+Lecture Command Listing -- Moving Files
+ls
+mkdir web
+ls
+git mv index.html web
+cd web/
+ll
+pwd
+cd ..
+ls
+git status
+git commit -m "Moving index.html file to web folder"
+clear
+ 
+
+Lecture Command Listing -- Ignoring Files
+mate application.log
+ls
+git status
+mate .iitignore
+git status
+ls -a
+git add .gitignore
+clear
+git status
+git commit -m "adding ignore file"
 
